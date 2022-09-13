@@ -83,15 +83,24 @@ Console.WriteLine (square);
 
 // Кратное 7 и 23
 
-Console.WriteLine("Введите число");
-int number = Convert.ToInt32 (Console.ReadLine());
+// Console.WriteLine("Введите число");
+// int number = Convert.ToInt32 (Console.ReadLine());
 
-if (number % 7 == 0 && number % 23 == 0)
-{
-    Console.WriteLine ("Это число кратное 7 и 23");
-}
-else
-{
-    Console.WriteLine ("Это число не является кратным 7 и 23");
-}
+// if (number % 7 == 0 && number % 23 == 0)
+// {
+//     Console.WriteLine ("Это число кратное 7 и 23");
+// }
+// else
+// {
+//     Console.WriteLine ("Это число не является кратным 7 и 23");
+// }
 
+// Задача 67: Напишите программу, которая будет принимать на вход число
+// и возвращать сумму его цифр.
+int number = Convert.ToInt32(Console.ReadLine());
+int SumNumber (int digit)
+{
+    if (digit == 0) return 0;
+    return digit%10 + SumNumber(digit/10);
+}
+Console.WriteLine(SumNumber(number));
